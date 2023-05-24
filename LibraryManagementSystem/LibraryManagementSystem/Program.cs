@@ -11,8 +11,8 @@ namespace LibraryManagementSystem
         static void Main(string[] args)
         {
             AnsiConsole.Write(new FigletText("Library Management System").Centered().Color(Color.White));
-            Books sc1= new Books();
-            Students sc2= new Students();  
+            Books sc1 = new Books();
+            Students sc2 = new Students();
             string username = AnsiConsole.Ask<string>("[yellow]Enter Username:[/]");
             string password = AnsiConsole.Ask<string>("[yellow]Enter Password:[/]");
             try
@@ -52,7 +52,7 @@ namespace LibraryManagementSystem
                                 }
                             case "Edit_Book_Details":
                                 {
-                                   sc1.Edit_Book_Details();
+                                    sc1.Edit_Book_Details();
                                     break;
                                 }
                             case "Delete_Book_Details":
@@ -82,7 +82,7 @@ namespace LibraryManagementSystem
                                 }
                             case "Return_Book":
                                 {
-                                   sc1.Return_Book();
+                                    sc1.Return_Book();
                                     break;
                                 }
                             case "Search_Book_Based_on_Author":
@@ -112,7 +112,8 @@ namespace LibraryManagementSystem
             catch (Exception ex)
             {
                 AnsiConsole.MarkupLine($"[red] {ex.Message} [/]");
-            }
+            } 
+        
         }
     }
 }
